@@ -1,0 +1,11 @@
+# docker-compose.yml
+services:
+  java-app:
+    image: localhost/ubuntu-java-gui:latest
+    ports:
+      - "5900:5900"
+    volumes:
+      - ./Tetrisblok.jar:/app/app.jar  # 映射JAR包
+    #environment:
+      #- JAVA_OPTS=-Xmx1024m -XX:MaxMetaspaceSize=256m
+    entrypoint: ["/entrypoint.sh"]
