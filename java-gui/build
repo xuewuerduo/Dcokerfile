@@ -1,0 +1,1 @@
+podman build -t ubuntu-java-gui --build-arg JAR_PATH=Chess.jar .
